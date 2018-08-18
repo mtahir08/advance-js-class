@@ -9,11 +9,9 @@
 // 3) Testability—Do I struggle to unit test my functions?
 // 4) Easy to reason about—Is my code unstructured and hard to follow?
 
-
-
 /**
 |--------------------------------------------------
-| IMPERATIVE | DECLARATIVE(WHAT) PROGRAMMING
+| IMPERATIVE | DECLARATIVE PROGRAMMING
 |--------------------------------------------------
 */
 
@@ -26,6 +24,21 @@ const newValues = [];
 for (var i = 0; i < oldValues.length; i++) {
   newValues.push(oldValues[i] + 5);
 }
+console.log(newValues);
+
+// OR
+
+const oldValues = [10, 20, 35, 46, 57, 68, 79, 80];
+const newValues = [];
+for (var i = 0; i < oldValues.length; i++) {
+  const newValue = executeThisOnEachIterate(oldValues[i]);
+  newValues.push(newValue);
+}
+
+function executeThisOnEachIterate(value) {
+  return value + 5;
+}
+
 console.log(newValues);
 
 // DECLARATIVE
