@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Callback</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <script>
+        var url = 'https://api.github.com/users/mtahir08';
+        function getUserData() {
+            $.ajax({
+                url: url,
+                type: 'GET',
+                success: function (data) {
+                    console.log("Success data", data);
+                },
+                error: function (err) {
+                    console.log("Error ", err);
+                }
+            });
+        }
+
+        getUserData();
+        for (let i = 0; i < 10; i++) {
+            setTimeout(function () {
+                console.log(i);
+            }, 0)
+        }
+
+    </script>
+</body>
+
+</html>
