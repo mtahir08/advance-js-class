@@ -4,25 +4,27 @@
 |--------------------------------------------------
 */
 
-// - A promise is an object that may produce a single value some time in the future:
+// - A promise is an object that may produce
+//  a single value some time in the future:
 
 // It will be in one of 3 possible states:
 // Fulfilled: onFulfilled() will be called
 // Rejected: onRejected() will be called
 // Pending: not yet fulfilled or rejected
 
-var promised = new Promise(function(resolve) {
+var promised = new Promise(function(resolve, reject) {
   setTimeout(function() {
-    resolve(20000);
-  }, 1500);
+    resolve('resolved');
+    // reject();
+  }, 2000);
 });
 
 promised
   .then(function(data) {
-    console.log({ data });
+    console.log('promise fulfilled', data);
   })
   .catch(function(error) {
-    console.log({ error });
+    console.log('promise rejected', error);
   });
 
 /**

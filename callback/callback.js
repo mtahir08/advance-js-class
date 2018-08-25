@@ -43,7 +43,6 @@ function average(value, num, callback) {
 }
 
 var sum_result = sum(a, b, c);
-console.log({ sum_result });
 
 average(sum_result, 3, function(result) {
   console.log('Average of ' + a + ', ' + b + ' and ' + c + ' is ' + result);
@@ -83,16 +82,16 @@ function average(value, num, cb) {
   console.log('I am going to calculate average.');
   const result = value / num;
   cb(result);
-  // cb is short form of callbackß
+  // cb is short form of callback
 }
 
 function sum(a, b, c, cb) {
   console.log('I am going to sum all values.');
   const result = a + b + c;
-  cb(result, 3, callback);
+  cb(result, 3, callback); // callback is passed as argument
 }
 
-sum(a, b, c, average);
+sum(a, b, c, average); //here fn average passed as argument
 
 /**
 |--------------------------------------------------

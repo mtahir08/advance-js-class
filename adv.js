@@ -1,6 +1,6 @@
 /**
 |--------------------------------------------------
-| Object Destructuring, Matching, Default Values
+| Object Destructuring, Default Values
 |--------------------------------------------------
 */
 // Destructuring
@@ -27,7 +27,7 @@ const { name = 'Arsalan', email = 'example@example.com' } = obj;
 
 /**
 |--------------------------------------------------
-| Array Destructuring, Matching, Default Values
+| Array Destructuring, Default Values
 |--------------------------------------------------
 */
 // Destructuring
