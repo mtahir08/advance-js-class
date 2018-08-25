@@ -9,7 +9,7 @@
 7. FAT ARROW | ARROW | LAMBDA FUNCTION
 8. CALLBACK
 9. Promise
-10. Object Destructuring, Matching, Default Values
-11. Array Destructuring, Matching, Default Values
+10. Object Destructuring, Default Values
+11. Array Destructuring, Default Values
 12. Fetch api
 13. .map(), .filter(), .some() 
